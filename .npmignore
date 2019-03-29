@@ -1,0 +1,20 @@
+# Keep only JS files, unless they are part of templates
+*.ts
+*.js.map
+!src/**/files/**/*.js
+!src/**/files/**/*.ts
+!*.d.ts
+
+# IDEs
+.idea/
+jsconfig.json
+.vscode/
+
+# Misc
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Mac OSX Finder files.
+**/.DS_Store
+.DS_Store
