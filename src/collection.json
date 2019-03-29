@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": [ "@schematics/angular" ],
+  "schematics": {
+    "component": {
+      "aliases": [ "c" ],
+      "description": "Create an Angular component with a Storybook stories file.",
+      "factory": "./component",
+      "schema": "./component/schema.json"
+    },
+    "stories": {
+      "aliases": [ "st" ],
+      "description": "Creates a Storybook stories file for an existing Angular component",
+      "factory": "./stories",
+      "schema": "./stories/schema.json"
+    }
+  }
+}

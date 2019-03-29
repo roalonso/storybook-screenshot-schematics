@@ -1,0 +1,16 @@
+import {moduleMetadata, storiesOf} from '@storybook/angular';
+import {withScreenshot} from 'storybook-chrome-screenshot';
+
+import {<%= classify(name) %>Component} from './<%= dasherize(name) %>.component';
+
+storiesOf('<%= classify(name) %>Component', module)
+    .addDecorator(moduleMetadata({
+      declarations: [<%= classify(name) %>Component],
+    }))
+    .add(
+        'default',
+        withScreenshot()(
+            () => ({
+              component: <%= classify(name) %>Component,
+              props: {},
+            })));

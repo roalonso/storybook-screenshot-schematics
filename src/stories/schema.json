@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "StoriesSchema",
+  "title": "Stories Schema",
+  "type": "object",
+  "description": "Creates a stories file next to the provided component.",
+  "properties": {
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path at which to create the stories file, relative to the current workspace. Default is a folder with the same name as the component in the project root.",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the component to add stories for.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What is the name of the component you want to add stories for?"
+    },
+    "flat": {
+      "type": "boolean",
+      "description": "When true, creates the stories file at the top level of the current project.",
+      "default": false
+    },
+    "lintFix": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, applies lint fixes after generating the stories file.",
+      "x-user-analytics": 15
+    }
+  },
+  "required": ["name"]
+}
