@@ -7,7 +7,7 @@
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "schematics", "storybook", "screenshot", "visual-testing"
   ],
   "author": "Rodrigo Alonso",
   "license": "MIT",
@@ -20,5 +20,9 @@
     "@types/node": "^8.0.31",
     "jasmine": "^3.0.0",
     "typescript": "~3.2.2"
+  },
+  "peerDependencies": {
+    "@storybook/angular": "^4.1.13",
+    "storybook-chrome-screenshot": "^1.4.0"
   }
 }
