@@ -20,8 +20,7 @@ import { Schema as ComponentOptions } from './schema';
 
 
 export default function (options: ComponentOptions): Rule {
-  return (host: Tree, context: SchematicContext) => {
-    context.logger.error('Stories: ' + JSON.stringify(options));
+  return (host: Tree, _context: SchematicContext) => {
     if (!options.project) {
       throw new SchematicsException('Option (project) is required.');
     }
